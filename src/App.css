@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+
+:root{
+    --textarea-color: rgb(227, 240, 253);
+    --page-color: rgb(124, 198, 255);
+}
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: var(--page-color);
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#container{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+#box1{
+display: flex;
+flex-direction: column;
+margin: 30px auto;
+}
+
+header{
+background-color: rgb(50, 163, 249);
+padding: 5px;
+border: 1px solid black;
+box-shadow: 0px 0px 20px black;
+font-weight: 600;
+}
+
+#editor{
+  background-color: var(--textarea-color);
+  width: 600px;
+  max-width: 600px;
+  min-width: 600px;
+  height: 200px;
+  min-height: 200px;
+  max-height: 500px;
+  align-self: center;
+  overflow-y: scroll;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  padding: 5px;
+  margin: 0 auto;
+  box-shadow: 0px 8px 25px black;
+}
+
+textarea{
+  outline: 0;
+}
+
+#box2{
+  margin-bottom: 30px;
+}
+
+#preview{
+  background-color: var(--textarea-color);
+  width: 830px;
+  max-width: 830px;
+  min-width: 830px;
+  padding: 20px;
+  box-shadow: 0px 8px 25px black;
+}
+
+img{
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+code{
+  display: inline;
+  background-color: white;
+}
+
+ul, ol{
+  padding-left: 20px
+}
+h1{
+  border-bottom: 2px solid black;
+}
+h2, h3, h4, h5, h6{
+  border-bottom: 1px inset black;
+}
+
+pre code{
+  display: block;
+}
+
+#preview > *{
+  margin: 15px 5px;
+}
+
+.clickable{
+  width: 20px;
+  height: auto;
+  margin-left: 82%;
+  font-size: 16px;
+  background-color: inherit;
+  border: none;
+}
+
+.clickable:hover{
+  color: rgb(58, 3, 255);
+  cursor: pointer;
+}
+
+@media (max-width:850px) {
+
+  #preview{
+    width: 630px;
+    max-width: 630px;
+    min-width: 630px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+ 
+  #editor{
+    width: 500px;
+    max-width: 500px;
+    min-width: 500px;
   }
-  to {
-    transform: rotate(360deg);
+  .clickable{
+    margin-left: 77%;
+    cursor: pointer;
   }
+
 }
